@@ -1,0 +1,50 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-4 col-12">
+        <a href="#" onclick="startLoginProcess('/followers')">
+            <div class="small-box bg-info">
+                <div class="inner">
+                    <div class="icon">
+                        <i class="nav-icon fas fa-users"></i>
+                    </div>
+                    <p>Followers</p>
+                    <h3>Show Followers</h3>
+                </div>
+                <a href="#" class="small-box-footer">View More <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-lg-4 col-12">
+        <a href="#" onclick="startLoginProcess('/not_following_back')">
+            <div class="small-box bg-danger">
+                <div class="inner">
+                    <div class="icon">
+                        <i class="nav-icon fas fa-user-slash"></i>
+                    </div>
+                    <p>Not Following Back</p>
+                    <h3>Users Not Following You Back</h3>
+                </div>
+                <a href="#" class="small-box-footer">View More <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-lg-4 col-12">
+        <a href="#" onclick="startLoginProcess('/following_not_followed')">
+            <div class="small-box bg-warning">
+                <div class="inner">
+                    <div class="icon">
+                        <i class="nav-icon fas fa-user-friends"></i>
+                    </div>
+                    <p>Following Not Followed Back</p>
+                    <h3>Users You Follow But Don't Follow You Back</h3>
+                </div>
+                <a href="#" class="small-box-footer">View More <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock %}

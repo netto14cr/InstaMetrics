@@ -1,0 +1,28 @@
+
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+  <section class="section">
+    <div class="columns">
+      <div class="column is-one-third is-offset-one-third">
+        <input type="text" class="input" placeholder="Search" name="q" hx-get="/search" hx-trigger="keyup changed delay:500ms" hx-target="#results">
+      </div>
+    </div>
+    <table class="table is-fullwidth">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Performer</th>
+          <th>Peak Position</th>
+          <th>Time on Chart</th>
+          <th>Chart Debut</th>
+        </tr>
+      </thead>
+      <tbody id="results">
+
+      </tbody>
+    </table>
+  </section>
+
+{% endblock %}

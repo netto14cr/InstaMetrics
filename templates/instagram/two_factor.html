@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="hold-transition login-page">
+  <div class="login-box">
+    <div class="login-logo">
+      <a href="#"><b>Admin</b>LTE</a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="card">
+      <div class="card-body login-card-body">
+        <p class="login-box-msg">Enter the two-factor authentication code</p>
+
+        <form action="{{ url_for('main.get_2fa_code') }}" method="post">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="2FA Code" name="code" required>
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-key"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>
+          </div>
+        </form>
+
+        <p class="mb-1">
+          <a href="{{ url_for('main.index') }}">Go back to login</a>
+        </p>
+      </div>
+      <!-- /.login-card-body -->
+    </div>
+  </div>
+  <!-- /.login-box -->
+</div>
+{% endblock %}

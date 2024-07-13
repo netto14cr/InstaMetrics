@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<h2>Followers</h2>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped dataTable">
+  <thead>
+    <tr>
+      <th scope="col">Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for follower in followers %}
+    <tr>
+      <td>{{ follower.username }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}
