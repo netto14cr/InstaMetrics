@@ -2,12 +2,15 @@ import os
 from flask import Flask, render_template, Blueprint, request, jsonify
 import instaloader
 from dotenv import load_dotenv
+from threading import Timer
+import webbrowser
 
 # Cargar variables de entorno desde el archivo .env
 load_dotenv()
 
 # Configurar la aplicación Flask
 app = Flask(__name__)
+
 
 # Definir el blueprint principal
 main = Blueprint("main", __name__)
@@ -97,3 +100,5 @@ app.register_blueprint(main)
 
 if __name__ == "__main__":
     app.run(debug=True)
+    # Abrir automáticamente el navegador después de 2 segundos
+    Timer(2, lambda: webbrowser.open('http://127.0.0.1:5000/')).start()
